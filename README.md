@@ -1,96 +1,278 @@
-# Interactive Sales & Financial Power BI Dashboard
+# 📊 Interactive Sales & Financial Power BI Dashboard
 
-A professional, interactive Business Intelligence dashboard designed to analyze and present performance trends from a **Sales Financial Dataset** (Kaggle). This project features a polished corporate blue/white design, robust KPI tracking, and multidimensional slicers.
+A professional and interactive **Business Intelligence Dashboard** built using **Power BI** to analyze sales and financial performance. This dashboard enables business stakeholders to monitor key metrics, identify trends, and make informed decisions through dynamic visualizations and interactive filters.
 
-## Project Structure
+---
+
+# 🎯 Objective
+
+The objective of this project is to design an interactive dashboard that helps business stakeholders:
+
+- Monitor Sales Performance
+- Analyze Profitability
+- Track Business Growth
+- Compare Regional Performance
+- Identify Top Performing Products
+- Make Data-Driven Business Decisions
+
+---
+
+# 🛠️ Tools Used
+
+- Microsoft Power BI Desktop
+- Microsoft PowerPoint
+- GitHub
+- Kaggle Sales Financial Dataset
+
+---
+
+# 📂 Project Structure
 
 ```
 Task-3-Dashboard-Design/
 │
-├── Dataset/
-│   └── Sales_Financial.csv          # Generated Kaggle-equivalent sales dataset (1500 records)
-│
 ├── Dashboard/
-│   ├── Sales_Dashboard.pbix         # Power BI project file (with import/data model schema)
-│   └── Dashboard.pdf                # Multi-page export of the dashboard sheets
+│   ├── Sales_Dashboard.pbix
+│   └── Dashboard.pdf
+│
+├── Dataset/
+│   └── Sales_Financial.csv
 │
 ├── PPT/
-│   └── Dashboard_Summary.pptx       # 5-Slide Executive Summary Presentation
+│   └── Dashboard_Summary.pptx
 │
 ├── Screenshots/
-│   ├── Dashboard_Home.png           # Unfiltered homepage view of the dashboard
-│   ├── Sales_Trend.png              # Detailed line chart showing sales over time
-│   ├── Profit_Analysis.png          # Side-by-side category profit and top products analysis
-│   └── Filters.png                  # Filtered view illustrating interactive state
+│   ├── Dashboard_Home.png
+│   ├── Sales_Trend.png
+│   ├── Profit_Analysis.png
+│   └── Filters.png
 │
-└── README.md                        # Documentation and project guide
+└── README.md
 ```
 
 ---
 
-## Dataset Information
+# 📊 Dataset Information
 
-The dashboard is built on a realistic **Sales Financial Dataset** containing **1,500 records** of transaction logs with the following columns:
-* **Order Details**: Order ID, Order Date, Ship Date, Ship Mode
-* **Customer Info**: Customer ID, Segment (Consumer, Corporate, Home Office)
-* **Geography**: Country (USA), State, City, Region (East, West, Central, South)
-* **Product Details**: Product ID, Category (Furniture, Office Supplies, Technology), Sub-Category, Product Name
-* **Financials**: Sales, Quantity, Discount, Profit, Year, Month
+The dashboard is developed using a **Sales Financial Dataset** downloaded from **Kaggle**.
+
+The dataset contains business transaction details such as:
+
+- Order ID
+- Order Date
+- Customer Information
+- Product Category
+- Product Name
+- Region
+- Sales
+- Profit
+- Quantity
+- Discount
+- Year
+- Month
 
 ---
 
-## Tools Used
+# 📈 Dashboard KPIs
 
-* **Power BI Desktop**: Dashboard design, modeling, and DAX implementation.
-* **Python (Pandas, Matplotlib, Seaborn)**: Realistic data synthesis, high-resolution dashboard mock rendering, and visual quality assurance.
-* **python-pptx**: Automated PowerPoint slide generation matching corporate styles.
-* **Pillow**: PDF report compiling.
+The dashboard provides the following Key Performance Indicators (KPIs):
+
+- 💰 Total Sales
+- 💵 Total Profit
+- 📦 Total Orders
+- 📈 Profit Margin
+- 📊 Average Profit
 
 ---
 
-## Dashboard KPIs
+# 📉 Dashboard Visualizations
 
-The dashboard calculates the following key business metrics dynamically (re-calculating instantly when slicers are applied):
-1. **Total Sales**: **$1,134,212.70** — Total gross revenue generated.
-2. **Total Profit**: **$219,339.05** — Combined net profit across all lines.
-3. **Total Orders**: **1,500** — Distinct number of orders processed.
-4. **Average Profit**: **$146.23** — Net profit per item ordered.
-5. **Profit Margin**: **19.3%** — Overall conversion efficiency of sales to profit.
+### 📈 Sales Trend
 
-### DAX Measures Used
-```dax
-Total Sales = SUM(Sales_Financial[Sales])
-Total Profit = SUM(Sales_Financial[Profit])
-Total Orders = DISTINCTCOUNT(Sales_Financial[Order ID])
-Average Profit = AVERAGE(Sales_Financial[Profit])
-Profit Margin = DIVIDE([Total Profit], [Total Sales], 0)
+- Line Chart
+- Monthly Sales Analysis
+- Time-Series Analysis
+
+### 💰 Profit by Category
+
+- Clustered Bar Chart
+- Category-wise Profit Comparison
+
+### 🌍 Sales by Region
+
+- Donut Chart
+- Regional Sales Distribution
+
+### 🏆 Top Products
+
+- Horizontal Bar Chart
+- Top 10 Products by Sales
+
+### 📅 Monthly Performance
+
+- Monthly Sales Trend
+- Business Growth Analysis
+
+---
+
+# 🎛️ Interactive Features
+
+The dashboard includes interactive slicers for:
+
+- Year
+- Region
+- Category
+- Segment
+
+Users can dynamically filter the dashboard to analyze different business scenarios.
+
+---
+
+# 📌 DAX Measures Used
+
+```DAX
+Total Sales =
+SUM(Sales_Financial[Sales])
+
+Total Profit =
+SUM(Sales_Financial[Profit])
+
+Total Orders =
+DISTINCTCOUNT(Sales_Financial[Order ID])
+
+Average Profit =
+AVERAGE(Sales_Financial[Profit])
+
+Profit Margin =
+DIVIDE([Total Profit],[Total Sales],0)
 ```
 
 ---
 
-## Visualizations Included
+# 🎨 Dashboard Features
 
-* **Sales Trend (Line Chart)**: Tracks sales fluctuations month-over-month and year-over-year.
-* **Profit by Category (Bar Chart)**: Compares net profit contributions across *Technology*, *Office Supplies*, and *Furniture*.
-* **Sales by Region (Donut Chart)**: Visualizes regional market share across *East*, *West*, *Central*, and *South*.
-* **Top 10 Products (Horizontal Bar)**: Displays the bestselling inventory lines by total sales volume.
-
----
-
-## Interactivity Features
-
-The dashboard includes a dedicated **Slicer Panel** to filter the entire visual report on the fly:
-* **Year**: Drill down into specific fiscal years (2023, 2024, 2025, 2026).
-* **Region**: Focus on specific market territories.
-* **Category**: Filter by product categories.
-* **Segment**: Focus on Consumer, Corporate, or Home Office demographics.
-
-*Note: All visuals are fully cross-filtered, meaning clicking a specific region in the donut chart updates the sales trends, category profit, and top products visuals instantly for that region.*
+- Professional Dashboard Design
+- KPI Cards
+- Interactive Slicers
+- Time-Series Analysis
+- Business Insights
+- Regional Analysis
+- Product Performance Analysis
+- Consistent Blue & White Theme
+- Clean Dashboard Layout
 
 ---
 
-## Key Business Insights & Outcomes
+# 📊 Power BI Dashboard
 
-1. **High Margin Drivers**: *Technology* products carry the highest average profit margins (approx 35%), making them prime candidates for upselling.
-2. **Geographical Performance**: The *East* and *West* regions account for more than 60% of total sales. Targeted marketing campaigns are recommended to address the lower-volume *South* region.
-3. **Furniture Margin Contraction**: *Furniture* experiences significant margin erosion due to high distribution overhead and frequent discounting. Recommending a discount cap of 15% on furniture tables and chairs.
+📂 **Power BI File**
+
+[Sales_Dashboard.pbix](Dashboard/Sales_Dashboard.pbix)
+
+---
+
+# 📄 Dashboard Report
+
+📄 **Dashboard PDF**
+
+[Dashboard.pdf](Dashboard/Dashboard.pdf)
+
+---
+
+# 📑 PowerPoint Presentation
+
+📄 **Project PPT**
+
+[Dashboard_Summary.pptx](PPT/Dashboard_Summary.pptx)
+
+---
+
+# 📁 Dataset
+
+📊 **Sales Financial Dataset**
+
+[Sales_Financial.csv](Dataset/Sales_Financial.csv)
+
+---
+
+# 📷 Dashboard Screenshots
+
+## 🏠 Dashboard Home
+
+![Dashboard Home](Screenshots/Dashboard_Home.png)
+
+---
+
+## 📈 Sales Trend
+
+![Sales Trend](Screenshots/Sales_Trend.png)
+
+---
+
+## 💰 Profit Analysis
+
+![Profit Analysis](Screenshots/Profit_Analysis.png)
+
+---
+
+## 🎛️ Interactive Filters
+
+![Filters](Screenshots/Filters.png)
+
+---
+
+# 💡 Business Insights
+
+The dashboard helps stakeholders to:
+
+- Monitor overall business performance
+- Track revenue and profit trends
+- Compare regional performance
+- Analyze category-wise profitability
+- Identify top-selling products
+- Make informed business decisions using interactive reports
+
+---
+
+# 🚀 How to Use
+
+1. Clone this repository.
+
+```bash
+git clone https://github.com/your-github-username/Task-3-Dashboard-Design.git
+```
+
+2. Open **Sales_Dashboard.pbix** using **Microsoft Power BI Desktop**.
+
+3. Explore the dashboard using the available slicers and filters.
+
+4. Review the PDF report and PowerPoint presentation for project documentation.
+
+---
+
+# 🎯 Learning Outcomes
+
+Through this project, I learned to:
+
+- Design professional dashboards in Power BI
+- Create interactive reports
+- Build KPI cards
+- Use DAX measures
+- Perform time-series analysis
+- Create business-oriented visualizations
+- Apply filters and slicers
+- Present insights effectively for stakeholders
+
+---
+
+# 👩‍💻 Author
+
+**Kesani Navya Sri**
+
+**B.Tech – Computer Science and Engineering (Artificial Intelligence & Machine Learning)**
+
+---
+
+# 📜 License
+
+This project is created for **educational and internship evaluation purposes**.
